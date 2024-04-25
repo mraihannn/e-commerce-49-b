@@ -41,9 +41,11 @@ li:last-child {
 li:hover {
   background-color: aqua;
   cursor: pointer;
+  border-radius: 30px;
 }
 .active {
   background-color: aqua;
+  border-radius: 30px;
 }
 .container2 {
   display: flex;
