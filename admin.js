@@ -97,32 +97,12 @@ function createCard(item, data) {
       localStorage.setItem("stock", JSON.stringify(storedStock));
 
       stockCount.textContent = "Stock: " + storedStock[item].stock;
-      jumlahBarang.textContent =
-        "Total Item : " +
-        (parseInt(jumlahBarang.textContent.split(": ")[1]) + 1);
-      totalHarga.textContent =
-        "Total Price : Rp." +
-        (parseInt(totalHarga.textContent.split(": Rp.")[1]) +
-          stock[item].harga);
-    }
-    if (stock[item].stock === 0) {
-      button.disabled = true;
     }
   });
   card.appendChild(button);
 
   cards.appendChild(card);
 }
-
-checkoutButton.addEventListener("click", function () {
-  if (parseInt(jumlahBarang.textContent.split(": ")[1]) === 0) {
-    alert("Please buy minimal 1 item");
-  } else {
-    alert("Thanks for shopping");
-    jumlahBarang.textContent = "Total Item : 0";
-    totalHarga.textContent = "Total Price : Rp.0";
-  }
-});
 
 // Initial render
 let storedStock = JSON.parse(localStorage.getItem("stock")) || stock;
