@@ -20,6 +20,10 @@ a {
 main {
   background-color: whitesmoke;
   width: 100%;
+  padding: 20px;
+  background-size: cover;
+  background-position: right center; 
+  background-image: url("ecomer.jpg");
 }
 .profile-container {
   display: flex;
@@ -41,11 +45,9 @@ li:last-child {
 li:hover {
   background-color: aqua;
   cursor: pointer;
-  border-radius: 30px;
 }
 .active {
   background-color: aqua;
-  border-radius: 30px;
 }
 .container2 {
   display: flex;
