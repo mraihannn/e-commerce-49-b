@@ -1,20 +1,21 @@
 let stock = {
-  sepatu: {
-    harga: 100000,
+  Shoes: {
+    harga: 12000000,
     stock: 5,
     image: "./sepatu.png",
   },
-  tas: {
-    harga: 53000,
+  Heels: {
+    harga: 5300000,
     stock: 7,
-    image: "./tas.png",
+    image: "./heels.png",
   },
-  sendal: {
-    harga: 20000,
+  Slippers: {
+    harga: 2100000,
     stock: 6,
     image: "./sendal.png",
   },
 };
+
 let cards = document.getElementById("cards");
 let jumlahBarang = document.getElementById("jumlahBarang");
 let totalHarga = document.getElementById("totalHarga");
