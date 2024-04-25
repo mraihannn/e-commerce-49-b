@@ -59,13 +59,14 @@ function createCard(item, data) {
   button.type = "button";
   button.value = "Buy";
   button.addEventListener("click", function () {
-    if (stock[item].stock > 0) {
-      stock[item].stock--;
-      localStorage.setItem("stock", JSON.stringify(stock));
-      stockCount.textContent = "Stock: " + stock[item].stock;
+    let storedStock = JSON.parse(localStorage.getItem("stock")) || stock;
+    if (storedStock[item].stock > 0) {
+      storedStock[item].stock--;
+      localStorage.setItem("stock", JSON.stringify(storedStock));
+      stockCount.textContent = "Stock: " + storedStock[item].stock;
       updateTotal(data.harga);
     }
-    if (stock[item].stock === 0) {
+    if (storedStock[item].stock === 0) {
       button.disabled = true;
     }
   });

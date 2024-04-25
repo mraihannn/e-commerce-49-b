@@ -90,12 +90,13 @@ function createCard(item, data) {
   button.type = "button";
   button.value = "Add Stock";
   button.addEventListener("click", function () {
-    if (stock[item].stock > 0) {
-      stock[item].stock++;
+    let storedStock = JSON.parse(localStorage.getItem("stock")) || stock;
+    if (storedStock[item].stock > 0) {
+      storedStock[item].stock++;
       // Save stock to local storage
-      localStorage.setItem("stock", JSON.stringify(stock));
+      localStorage.setItem("stock", JSON.stringify(storedStock));
 
-      stockCount.textContent = "Stock: " + stock[item].stock;
+      stockCount.textContent = "Stock: " + storedStock[item].stock;
       jumlahBarang.textContent =
         "Total Item : " +
         (parseInt(jumlahBarang.textContent.split(": ")[1]) + 1);
