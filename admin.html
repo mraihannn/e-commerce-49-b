@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hackathon B</title>
+  </head>
+  <body>
+    <div class="container">
+      <aside>
+        <div class="profile-container">
+          <img src="profile.png" alt="profile" width="30%" />
+          <div>
+            <h3>Uzumaki Bayu</h3>
+            <h4>Admin</h4>
+          </div>
+        </div>
+        <ul>
+          <li>Handphone & Tablet</li>
+          <li>Food & Drink</li>
+          <li>Kids</li>
+          <li class="active">Apparel</li>
+          <li>Login</li>
+        </ul>
+      </aside>
+      <main>
+        <h1>Apparel</h1>
+        <div class="container2">
+          <div>
+            <h2>Add/Update Item</h2>
+            <h5>Nama Item :</h5>
+            <input id="newNama" type="text" />
+            <h5>Price :</h5>
+            <input id="newPrice" type="number" />
+            <h5>Stock :</h5>
+            <input id="newStock" type="number" />
+            <h5>Image :</h5>
+            <input id="newImage" type="file" /><br />
+            <input id="submit" type="button" value="Add" />
+          </div>
+        </div>
+        <div id="cards" class="cards">
+          <!-- <div class="card">
+            <img src="sepatu.png" alt="sepatu" class="image" />
+            <h2>Sepatu</h2>
+            <h3>Harga : Rp. 450.000</h3>
+            <h3>Stock : 5</h3>
+            <input type="button" value="Buy" />
+          </div> -->
+        </div>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
