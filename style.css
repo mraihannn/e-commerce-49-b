@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.container {
+  display: flex;
+  min-height: 100vh;
+}
+
+aside {
+  width: 400px;
+  background-color: white;
+}
+main {
+  background-color: whitesmoke;
+  width: 100%;
+}
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+ul {
+  margin-top: 10px;
+  padding: 0;
+}
+li {
+  list-style: none;
+  text-align: center;
+  padding: 5px;
+  font-size: 20px;
+}
+li:last-child {
+  margin-top: 350px;
+}
+li:hover {
+  background-color: aqua;
+  cursor: pointer;
+}
+.active {
+  background-color: aqua;
+}
+.container2 {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+h1 {
+  text-align: center;
+}
+.cards {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 277px;
+  height: 277px;
+  background-color: white;
+  border-radius: 10px;
+  margin: 10px 10px;
+}
+.image {
+  width: 50%;
+}
+#submit {
+  margin-top: 10px;
+}
