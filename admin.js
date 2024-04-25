@@ -43,14 +43,20 @@ submitButton.addEventListener("click", function () {
       stock: newStock,
       image: newImage,
     };
+    // Save stock to local storage
+    localStorage.setItem("stock", JSON.stringify(stock));
 
     // Clear the cards div
     cards.innerHTML = "";
 
     // Re-render the items
-    for (let item in stock) {
-      createCard(item, stock[item]);
+    let storedStock = JSON.parse(localStorage.getItem("stock")) || stock;
+    for (let item in storedStock) {
+      createCard(item, storedStock[item]);
     }
+    // for (let item in stock) {
+    //   createCard(item, stock[item]);
+    // }
 
     alert("New item added");
   };
@@ -85,6 +91,9 @@ function createCard(item, data) {
   button.addEventListener("click", function () {
     if (stock[item].stock > 0) {
       stock[item].stock++;
+      // Save stock to local storage
+      localStorage.setItem("stock", JSON.stringify(stock));
+
       stockCount.textContent = "Stock: " + stock[item].stock;
       jumlahBarang.textContent =
         "Total Item : " +
@@ -114,6 +123,7 @@ checkoutButton.addEventListener("click", function () {
 });
 
 // Initial render
-for (let item in stock) {
-  createCard(item, stock[item]);
+let storedStock = JSON.parse(localStorage.getItem("stock")) || stock;
+for (let item in storedStock) {
+  createCard(item, storedStock[item]);
 }
