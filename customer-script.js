@@ -9,7 +9,7 @@ let stock = {
         stock: 7,
         image: "./heels.png",
     },
-    Slipers: {
+    Slippers: {
         harga: 2100000,
         stock: 6,
         image: "./sendal.png",
